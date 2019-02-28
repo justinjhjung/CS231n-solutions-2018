@@ -83,7 +83,6 @@ def svm_loss_vectorized(W, X, y, reg):
     # Getting margins
     correct_class_scores = scores[np.arange(num_train), y].reshape(-1,1)
     margins = np.maximum(0, scores - correct_class_scores + 1) # note delta = 1
-    mask_cor = (margins == 1)
     margins[np.arange(num_train), y] = 0 # let margins of correct classes be 0
     
     # Getting loss
@@ -107,7 +106,7 @@ def svm_loss_vectorized(W, X, y, reg):
     # Get dW
     mask_pos = (margins > 0) * 1
     correct_indicators = np.sum(mask_pos, axis=1) # This is to calculate dloss/dW_yi: dloss/dW_yi = - sum(1(>0)) * X[i] 
-    mask_pos[mask_cor] -= correct_indicators.T # Since only elements influenced by dloss/dW_yi have negative sign, we do it upfront.
+    mask_pos[np.arange(num_train), y] -= correct_indicators.T # Since only elements influenced by dloss/dW_yi have negative sign, we do it upfront.
     dW += np.dot(X.T, mask_pos) # - sum(1(>0)) is already reflected, now the only thing we should do is to calculate X.T.dot(mask_pos)
     dW /= num_train
     
