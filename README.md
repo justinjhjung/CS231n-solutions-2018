@@ -7,6 +7,7 @@ I would like to share my codes with everyone who is trying to come into the area
 ```
 1. Differentiation of this repository
 2. Errors and Solutions
+3. CS231n Lecture Note with highlights
 ```
 
 ### 1. Differentiation
@@ -60,3 +61,22 @@ Error 1) Permission denial when executing ./get_assignment3_data.sh
   -  chmod +x ./get_coco_captioning.sh
   -  chmod +x ./get_imagenet_val.sh
   -  chmod +x ./get_squeezenet_tf.sh
+```
+
+### 3. CS231n Lecture Note with highlights
+1. image classification notes
+- http://lnr.li/iPvlY
+2. linear classification notes
+   - http://lnr.li/AWGdL
+3. optimisation notes
+- http://lnr.li/0gu9j
+4. backprop notes
+- http://lnr.li/Wu2eL
+5. ConvNet notes
+- http://lnr.li/OuFoG
+6. Neural Nets notes 1
+- http://lnr.li/85yss
+7. Neural Nets notes 2
+- http://lnr.li/XYLLx
+8. Neural Nets notes 3
+- http://lnr.li/aqjhJ
