@@ -67,7 +67,7 @@ Error 1) Permission denial when executing ./get_assignment3_data.sh
 1. image classification notes
 - http://lnr.li/iPvlY
 2. linear classification notes
-   - http://lnr.li/AWGdL
+- http://lnr.li/AWGdL
 3. optimisation notes
 - http://lnr.li/0gu9j
 4. backprop notes
